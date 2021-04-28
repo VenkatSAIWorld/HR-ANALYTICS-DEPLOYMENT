@@ -1,0 +1,62 @@
+<! doctype html>
+
+<html>
+<head>
+
+<title> HR Analysis </title>
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'> 
+
+<body>
+
+<div class='form-group'>
+<form action='{{url_for('predict')}}' method='post'>
+
+<input type='text' name='employee_id' placeholder='Employee_id' required="required"  />
+
+<input type='text' name='education' placeholder='Education' required="required" />
+<input type='text' name='gender' placeholder='Gender' required="required"   />
+<input type='text' name='recruitment_channel' placeholder='Recruitment_channel' required="required" />
+<input type='text' name='no_of_trainings' placeholder='No_of_trainings' required="required"  />
+<input type='text' name='age' placeholder='Age' required="required"  />
+<input type='text' name='previous_year_rating' placeholder='Previous_year_rating' required="required"  />
+<input type='text' name='length_of_service' placeholder='Length_of_service' required="required"  />
+<input type='text' name='KPIs_met >80%' placeholder='KPIs_met >80%' required="required"  />
+<input type='text' name='awards_won?' placeholder='Awards_won?' required="required"  />
+<input type='text' name='avg_training_score' placeholder='Avg_training_score' required="required" />
+
+<button type='submit' > IS Promoted </button>
+
+</form>
+<br>
+<br>
+
+{{prediction_txt}}
+
+</div>
+
+</body>
+</html>
+
+
+
+<!-- ['employee_id', 'department', 'region', 'education', 'gender',
+       'recruitment_channel', 'no_of_trainings', 'age', 'previous_year_rating',
+       'length_of_service', 'KPIs_met >80%', 'awards_won?',
+       'avg_training_score', 'is_promoted']
